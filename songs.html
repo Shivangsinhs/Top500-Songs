@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <meta charset="utf-8" />
+    <title>Top 500 Songs</title>
+    <script defer src="songs.js"></script>
+    <style>
+      #songTable td,
+      th {
+        border: 1px solid black;
+      }
+      #songTable th {
+        background-color: gainsboro;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Rolling Stone's Top 500 Songs of All Time</h1>
+
+    <label for="selectYearStart">Please select a start year: </label>
+    <select id="selectYearStart">
+      <!-- Insert years as options here -->
+    </select>
+    <label for="selectYearEnd">Please select an end year: </label>
+    <select id="selectYearEnd">
+      <!-- Insert years as options here -->
+    </select>
+    <label for="sortByTitle">Sort Songs by Title: </label>
+    <select id="sortByTitle" required>
+      <option value="0" selected>No</option>
+      <option value="1">Ascending</option>
+      <option value="-1">Desscending</option>
+    </select>
+    <label for="songsAmount">Number of results: </label>
+    <select id="songsAmount" required>
+      <option value="500" selected>All</option>
+      <option value="25">25</option>
+      <option value="50">50</option>
+      <option value="100">100</option>
+    </select>
+    <label for="selectArtist">Please enter an artist name: </label>
+    <input type="text" id="selectArtist" name="selectArtist" />
+    <label for="selectTitle">Please enter a song title: </label>
+    <input type="text" id="selectTitle" name="selectTitle" />
+
+    <table id="songTable">
+      <tbody></tbody>
+    </table>
+  </body>
+</html>
